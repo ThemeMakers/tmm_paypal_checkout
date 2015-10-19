@@ -95,7 +95,7 @@ function tmm_paypal_init () {
 	/* create shortcode */
 	add_shortcode('paypal', array('paypalShortcode', 'frontendIndex'));
 
-	load_plugin_textdomain($config->getItem('plugin_id'), false, dirname(plugin_basename(__FILE__)) . '/languages');
+	load_plugin_textdomain('tmm_paypal_checkout', false, dirname(plugin_basename(__FILE__)) . '/languages');
 
 }
 
