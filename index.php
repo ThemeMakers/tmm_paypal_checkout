@@ -155,14 +155,13 @@ function tmm_paypal_currency($currency, $amount) {
 		$def_currency = get_option('paypal_currency');
 
 		if ($def_currency) {
-			$amount = (float) TMM_Helper::get_currency($amount, $currency, $def_currency);
+			$new_amount = tmm_get_currency_rate($amount, $currency, $def_currency);
 
-			if (!$amount) {
-				return false;
+			if ((int) $new_amount) {
+				$amount = $new_amount;
+				$currency = $def_currency;
 			}
 
-			$amount = round($amount, 2);
-			$currency = $def_currency;
 		}
 
 	}
