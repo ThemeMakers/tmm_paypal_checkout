@@ -46,6 +46,12 @@ class paypalAdmin {
                 $config_saved = TRUE;
             }
 
+	        $solution_types = array('Sole', 'Mark');
+	        if (isset($_POST['paypal_solutiontype']) && in_array($_POST['paypal_solutiontype'], $solution_types)) {
+		        update_option('paypal_solutiontype', $_POST['paypal_solutiontype']);
+		        $config_saved = TRUE;
+	        }
+
             if (isset($_POST['paypal_currency'])) {
                 update_option('paypal_currency', $_POST['paypal_currency']);
                 $config_saved = TRUE;

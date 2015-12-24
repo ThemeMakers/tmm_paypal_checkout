@@ -60,6 +60,27 @@
 			</tbody>
 		</table>
 
+		<hr>
+		<table class="form-table">
+			<tbody>
+			<tr class="form-field form-required">
+				<th scope="row"><label for="paypal_solutiontype"><strong><?php _e('Type of checkout flow', TMM_PAYPAL_PLUGIN_TEXTDOMAIN) ?></strong></label></th>
+				<td>
+					<select id="paypal_solutiontype" name="paypal_solutiontype">
+						<?php
+							$selected = get_option('paypal_solutiontype');
+							if (!$selected) {
+								$selected = 'Sole';
+							}
+							?>
+							<option value="Sole" <?php selected($selected, 'Sole');?>><?php _e('Buyer does not need to create a PayPal account to check out.', TMM_PAYPAL_PLUGIN_TEXTDOMAIN) ?></option>
+							<option value="Mark" <?php selected($selected, 'Mark');?>><?php _e('Buyer must have a PayPal account to check out.', TMM_PAYPAL_PLUGIN_TEXTDOMAIN) ?></option>
+					</select>
+				</td>
+			</tr>
+			</tbody>
+		</table>
+
 		<?php if (!in_array($config->getItem('default_currency'), $config->getItem('supported_currencies'))) { ?>
 		<hr>
 		<h3 class="title"><?php _e('PayPal currency', TMM_PAYPAL_PLUGIN_TEXTDOMAIN) ?>:</h3>
@@ -75,7 +96,7 @@
 							$selected = 'USD';
 						}
 						?>
-						<option val="<?php echo $val; ?>" <?php selected($selected, $val);?>><?php echo $val; ?></option>
+						<option value="<?php echo $val; ?>" <?php selected($selected, $val);?>><?php echo $val; ?></option>
 					<?php } ?>
 					</select>
 				</td>

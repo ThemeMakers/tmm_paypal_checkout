@@ -37,7 +37,6 @@ function tmm_paypal_init () {
 	$config->addItem('paypal_api_version', '98.0'); // version of PayPal NVP API
 	$config->addItem('paypal_sandbox_api_url', 'https://api-3t.sandbox.paypal.com/nvp');
 	$config->addItem('paypal_live_api_url', 'https://api-3t.paypal.com/nvp');
-	$config->addItem('paypal_method', 'SetExpressCheckout'); // payPal payment method
 	$config->addItem('paypal_sandbox_server_url', 'https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=');
 	$config->addItem('paypal_live_server_url', 'https://www.paypal.com/webscr?cmd=_express-checkout&token=');
 	$config->addItem('buy_now_button_src', 'http://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif');

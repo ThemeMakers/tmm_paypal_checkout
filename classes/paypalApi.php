@@ -47,17 +47,21 @@ class paypalApi
 			'USER' => trim(get_option('paypal_api_username')),
 			'PWD' => trim(get_option('paypal_api_password')),
 			'SIGNATURE' => trim(get_option('paypal_api_signature')),
-			'VERSION' => $config->getItem('paypal_api_version'),
+			'METHOD' => 'SetExpressCheckout',
 			'PAYMENTREQUEST_0_PAYMENTACTION' => 'Sale',
+			'RETURNURL' => $config->getItem('plugin_form_handler_url') . '?func=confirm',
+			'CANCELURL' => $config->getItem('cancel_page'),
+			'SOLUTIONTYPE' => get_option('paypal_solutiontype') === 'Mark' ? 'Mark' : 'Sole',
+			'VERSION' => $config->getItem('paypal_api_version'),
 			'PAYMENTREQUEST_0_AMT' => $amount,
 			'PAYMENTREQUEST_0_ITEMAMT' => $amount,
 			'PAYMENTREQUEST_0_AMT0' => $amount,
 			'ITEMAMT' => $amount,
 			'PAYMENTREQUEST_0_CURRENCYCODE' => $currency,
 			'PAYMENTREQUEST_0_DESC' => $desc,
-			'RETURNURL' => $config->getItem('plugin_form_handler_url') . '?func=confirm',
-			'CANCELURL' => $config->getItem('cancel_page'),
-			'METHOD' => $config->getItem('paypal_method')
+			'L_PAYMENTREQUEST_0_NAME0' => $role_name,
+			'L_PAYMENTREQUEST_0_DESC0' => $desc,
+			'L_PAYMENTREQUEST_0_AMT0' => $amount,
 		);
 
 		if (isset($_POST['PAYMENTREQUEST_0_CUSTOM'])) {
@@ -78,28 +82,6 @@ class paypalApi
 		} else {
 			header('Location: ' . $config->getItem('cancel_page'));
 		}
-
-//		if (isset($_POST['PAYMENTREQUEST_0_QTY'])) {
-//			$fields['PAYMENTREQUEST_0_QTY0'] = $_POST['PAYMENTREQUEST_0_QTY'];
-//			$fields['PAYMENTREQUEST_0_AMT'] = $fields['PAYMENTREQUEST_0_AMT'] * $_POST['PAYMENTREQUEST_0_QTY'];
-//			$fields['PAYMENTREQUEST_0_ITEMAMT'] = $fields['PAYMENTREQUEST_0_ITEMAMT'] * $_POST['PAYMENTREQUEST_0_QTY'];
-//			$fields['ITEMAMT'] = $fields['ITEMAMT'] * $_POST['PAYMENTREQUEST_0_QTY'];
-//		}
-//
-//		if (isset($_POST['TAXAMT'])) {
-//			$fields['PAYMENTREQUEST_0_TAXAMT'] = $_POST['TAXAMT'];
-//			$fields['PAYMENTREQUEST_0_AMT'] += $_POST['TAXAMT'];
-//		}
-//
-//		if (isset($_POST['HANDLINGAMT'])) {
-//			$fields['PAYMENTREQUEST_0_HANDLINGAMT'] = $_POST['HANDLINGAMT'];
-//			$fields['PAYMENTREQUEST_0_AMT'] += $_POST['HANDLINGAMT'];
-//		}
-//
-//		if (isset($_POST['SHIPPINGAMT'])) {
-//			$fields['PAYMENTREQUEST_0_SHIPPINGAMT'] = $_POST['SHIPPINGAMT'];
-//			$fields['PAYMENTREQUEST_0_AMT'] += $_POST['SHIPPINGAMT'];
-//		}
 
 		/* request to payPal for getting token */
 		$result = self::doCurlRequest($fields);
