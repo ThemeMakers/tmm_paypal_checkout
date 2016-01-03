@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ThemeMakers PayPal Express Checkout\n"
-"POT-Creation-Date: 2015-10-31 15:55+0100\n"
-"PO-Revision-Date: 2015-10-31 15:55+0100\n"
+"POT-Creation-Date: 2016-01-03 17:48+0100\n"
+"PO-Revision-Date: 2016-01-03 17:48+0100\n"
 "Last-Translator: Alex TM <support@webtemplatemasters.com>\n"
 "Language-Team: Alex TM <support@webtemplatemasters.com>\n"
 "Language: en_US\n"
@@ -28,7 +28,7 @@ msgstr ""
 msgid "Featured Cars Bundle"
 msgstr ""
 
-#: index.php:118
+#: index.php:117
 msgid "Payments history"
 msgstr ""
 
@@ -93,16 +93,28 @@ msgstr ""
 msgid "Please select"
 msgstr ""
 
-#: views/adminconfiguration.php:65
+#: views/adminconfiguration.php:67
+msgid "Type of checkout flow"
+msgstr ""
+
+#: views/adminconfiguration.php:76
+msgid "Buyer does not need to create a PayPal account to check out."
+msgstr ""
+
+#: views/adminconfiguration.php:77
+msgid "Buyer must have a PayPal account to check out."
+msgstr ""
+
+#: views/adminconfiguration.php:86
 msgid "PayPal currency"
 msgstr ""
 
-#: views/adminconfiguration.php:69 views/adminhistory.php:135
+#: views/adminconfiguration.php:90 views/adminhistory.php:135
 #: views/adminhistory.php:170 views/adminhistorydetails.php:24
 msgid "Currency"
 msgstr ""
 
-#: views/adminconfiguration.php:88
+#: views/adminconfiguration.php:109
 msgid "Save"
 msgstr ""
 
