@@ -154,6 +154,7 @@ function tmm_paypal_currency($currency, $amount) {
 		$def_currency = get_option('paypal_currency');
 
 		if ($def_currency) {
+			$currency = $def_currency;
 			$new_amount = tmm_get_currency_rate($amount, $currency, $def_currency);
 
 			if ((float) $new_amount) {
