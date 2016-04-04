@@ -5,7 +5,7 @@
  * Plugin URI: http://webtemplatemasters.com
  * Description: Integration of PayPal Express Checkout
  * Author: ThemeMakers
- * Version: 1.1.4
+ * Version: 1.1.5
  * Author URI: http://themeforest.net/user/ThemeMakers
  * Text Domain: tmm_paypal_checkout
  */
