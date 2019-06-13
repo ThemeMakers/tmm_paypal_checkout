@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ThemeMakers PayPal Express Checkout\n"
-"POT-Creation-Date: 2016-04-04 12:39+0300\n"
-"PO-Revision-Date: 2016-11-28 08:07+0100\n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2019-06-13 20:09+0200\n"
+"PO-Revision-Date: 2019-06-13 20:11+0200\n"
+"Last-Translator: ThemeMakers <support@webtemplatemasters.com>\n"
 "Language-Team: ThemeMakers Team <support@webtemplatemasters.com>\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.11\n"
+"X-Generator: Poedit 2.2.3\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: index.php\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -22,11 +22,11 @@ msgstr ""
 
 #: classes/paypalApi.php:25
 msgid "Account Status Upgrade"
-msgstr ""
+msgstr "Kontostatus Upgrade"
 
 #: classes/paypalApi.php:29
 msgid "Featured Cars Bundle"
-msgstr ""
+msgstr "TOP Fahrzeuge Paket Name"
 
 #: index.php:117
 msgid "Payments history"
@@ -38,7 +38,7 @@ msgstr "PayPal Express Checkout - Konfiguration"
 
 #: views/adminconfiguration.php:8
 msgid "Configuration updated."
-msgstr "Einstellung wurde aktualisiert"
+msgstr "Einstellung wurde aktualisiert."
 
 #: views/adminconfiguration.php:16
 msgid "PayPal environment"
@@ -83,7 +83,7 @@ msgstr "Monatliche Zahlung"
 
 #: views/adminconfiguration.php:55
 msgid "Error page"
-msgstr "Fehler!"
+msgstr "Fehler"
 
 #: views/adminconfiguration.php:55
 msgid "failed payment"
@@ -91,11 +91,11 @@ msgstr "fehlgeschlagenen Zahlung"
 
 #: views/adminconfiguration.php:57
 msgid "Please select"
-msgstr "Bitte wähle Sie ein Bundesland aus."
+msgstr "Bitte wählen"
 
 #: views/adminconfiguration.php:67
 msgid "Type of checkout flow"
-msgstr ""
+msgstr "ThemeMakers PayPal Express Checkout"
 
 #: views/adminconfiguration.php:76
 msgid "Buyer does not need to create a PayPal account to check out."
@@ -134,7 +134,7 @@ msgstr "Hier finden Sie alle Zahlungen, die auf Ihrer Website gemacht wurden."
 
 #: views/adminhistory.php:61
 msgid "Show all years"
-msgstr "Alle Jahre zeigen,"
+msgstr "Alle Jahre zeigen"
 
 #: views/adminhistory.php:69
 msgid "January"
