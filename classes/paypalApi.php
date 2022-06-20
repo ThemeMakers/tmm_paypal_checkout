@@ -222,7 +222,7 @@ class paypalApi
 		}
 
 		$update_data = array(
-			'transaction_id' => $result['PAYMENTINFO_0_TRANSACTIONID'],
+			'transaction_id' => isset($result['PAYMENTINFO_0_TRANSACTIONID']) ? $result['PAYMENTINFO_0_TRANSACTIONID'] : null,
 			'status' => $status
 		);
 
