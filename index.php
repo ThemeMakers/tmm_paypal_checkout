@@ -5,7 +5,7 @@
  * Plugin URI: http://webtemplatemasters.com
  * Description: Integration of PayPal Express Checkout
  * Author: ThemeMakers
- * Version: 1.1.9
+ * Version: 1.2.0
  * Author URI: http://themeforest.net/user/ThemeMakers
  * Text Domain: tmm_paypal_checkout
  */
@@ -17,7 +17,8 @@ require_once TMM_PAYPAL_PLUGIN_PATH . '/classes/paypalConfig.php';
 require_once TMM_PAYPAL_PLUGIN_PATH . '/classes/paypalShortcode.php';
 require_once TMM_PAYPAL_PLUGIN_PATH . '/classes/paypalAdmin.php';
 
-function tmm_paypal_init () {
+function tmm_paypal_init()
+{
 
 	/* Set base configuration */
 	$config = paypalConfig::getInstance();
@@ -43,12 +44,13 @@ function tmm_paypal_init () {
 	$config->addItem('checkout_button_src', 'https://www.paypalobjects.com/en_US/i/btn/btn_xpressCheckout.gif');
 	// default currency
 	if (defined('TMM_APP_CARDEALER_PREFIX')) {
-		$config->addItem('default_currency', TMM::get_option('default_currency', TMM_APP_CARDEALER_PREFIX) );
-	}else {
+		$config->addItem('default_currency', TMM::get_option('default_currency', TMM_APP_CARDEALER_PREFIX));
+	} else {
 		$config->addItem('default_currency', false);
 	}
 	// supported currencies
-	$config->addItem('supported_currencies',
+	$config->addItem(
+		'supported_currencies',
 		array(
 			'AUD',
 			'BRL',
@@ -93,7 +95,6 @@ function tmm_paypal_init () {
 
 	/* create shortcode */
 	add_shortcode('paypal', array('paypalShortcode', 'frontendIndex'));
-
 }
 
 add_action('init', 'tmm_paypal_init', 2);
@@ -101,20 +102,22 @@ add_action('init', 'tmm_paypal_init', 2);
 /**
  * Load plugin textdomain.
  */
-function tmm_paypal_load_textdomain() {
-	load_plugin_textdomain( 'tmm_paypal_checkout', false, plugin_basename( dirname( __FILE__ ) ) . '/languages' );
+function tmm_paypal_load_textdomain()
+{
+	load_plugin_textdomain('tmm_paypal_checkout', false, plugin_basename(dirname(__FILE__)) . '/languages');
 }
 
-add_action( 'plugins_loaded', 'tmm_paypal_load_textdomain' );
+add_action('plugins_loaded', 'tmm_paypal_load_textdomain');
 
 /**
  * Create admin menus
  */
-function adminMenu() {
-    $config = paypalConfig::getInstance();
+function adminMenu()
+{
+	$config = paypalConfig::getInstance();
 
-    add_menu_page($config->getItem('plugin_name'), $config->getItem('plugin_name'), 'level_10', $config->getItem('plugin_id'), array('paypalAdmin', 'adminConfiguration'), TMM_PAYPAL_PLUGIN_URL . '/images/icon.png');
-    add_submenu_page($config->getItem('plugin_id'), __('Payments history', $config->getItem('plugin_id')), __('Payments history', $config->getItem('plugin_id')), 'level_10', $config->getItem('plugin_history_id'), array('paypalAdmin', 'adminHistory'));
+	add_menu_page($config->getItem('plugin_name'), $config->getItem('plugin_name'), 'level_10', $config->getItem('plugin_id'), array('paypalAdmin', 'adminConfiguration'), TMM_PAYPAL_PLUGIN_URL . '/images/icon.png');
+	add_submenu_page($config->getItem('plugin_id'), __('Payments history', $config->getItem('plugin_id')), __('Payments history', $config->getItem('plugin_id')), 'level_10', $config->getItem('plugin_history_id'), array('paypalAdmin', 'adminHistory'));
 }
 
 add_action('admin_menu', 'adminMenu');
@@ -122,16 +125,17 @@ add_action('admin_menu', 'adminMenu');
 /**
  * Display amount in currency that supported by Paypal
  */
-function tmm_paypal_default_currency($amount) {
+function tmm_paypal_default_currency($amount)
+{
 	if ($amount <= 0) {
 		return;
 	}
 
-    $currency = TMM_Ext_Car_Dealer::$default_currency['name'];
+	$currency = TMM_Ext_Car_Dealer::$default_currency['name'];
 	$checked = apply_filters('tmm_paypal_currency', $currency, (float)$amount);
 
 	if ($currency !== $checked['currency']) {
-		if (TMM::get_option( 'car_price_symbol_pos', TMM_APP_CARDEALER_PREFIX ) === 'right') {
+		if (TMM::get_option('car_price_symbol_pos', TMM_APP_CARDEALER_PREFIX) === 'right') {
 			$price = $checked['amount'] . ' ' . $checked['currency'];
 		} else {
 			$price = $checked['currency'] . ' ' . $checked['amount'];
@@ -146,10 +150,11 @@ add_action('tmm_paypal_default_currency', 'tmm_paypal_default_currency');
  * Check currency.
  * If currency is not supported by Paypal convert it to default
  */
-function tmm_paypal_currency($currency, $amount) {
+function tmm_paypal_currency($currency, $amount)
+{
 	$config = paypalConfig::getInstance();
 
-	if ( !in_array($currency, $config->getItem('supported_currencies')) ){
+	if (!in_array($currency, $config->getItem('supported_currencies'))) {
 
 		$def_currency = get_option('paypal_currency');
 
@@ -161,12 +166,10 @@ function tmm_paypal_currency($currency, $amount) {
 				$amount = $new_amount;
 				$currency = $def_currency;
 			}
-
 		}
-
 	}
 
-	return array('currency'=>$currency, 'amount'=>$amount);
+	return array('currency' => $currency, 'amount' => $amount);
 }
 
 add_filter('tmm_paypal_currency', 'tmm_paypal_currency', 10, 2);
