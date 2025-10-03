@@ -2,11 +2,11 @@
 
 /**
  * Plugin Name: ThemeMakers PayPal Express Checkout
- * Plugin URI: http://webtemplatemasters.com
+ * Plugin URI: https://webtemplatemasters.com
  * Description: Integration of PayPal Express Checkout
  * Author: ThemeMakers
  * Version: 1.2.1
- * Author URI: http://themeforest.net/user/ThemeMakers
+ * Author URI: https://themeforest.net/user/ThemeMakers
  * Text Domain: tmm_paypal_checkout
  * Domain Path: /languages/
  */
@@ -14,6 +14,16 @@
 define('TMM_PAYPAL_PLUGIN_URL', trailingslashit(plugin_dir_url(__FILE__)));
 define('TMM_PAYPAL_PLUGIN_PATH', trailingslashit(plugin_dir_path(__FILE__)));
 define('TMM_PAYPAL_PLUGIN_TEXTDOMAIN', 'tmm_paypal_checkout');
+
+if (!function_exists('tmm_paypal_load_textdomain')) {
+	function tmm_paypal_load_textdomain()
+	{
+		load_plugin_textdomain(TMM_PAYPAL_PLUGIN_TEXTDOMAIN, false, dirname(plugin_basename(__FILE__)) . '/languages/');
+	}
+}
+
+add_action('plugins_loaded', 'tmm_paypal_load_textdomain');
+
 require_once TMM_PAYPAL_PLUGIN_PATH . '/classes/paypalConfig.php';
 require_once TMM_PAYPAL_PLUGIN_PATH . '/classes/paypalShortcode.php';
 require_once TMM_PAYPAL_PLUGIN_PATH . '/classes/paypalAdmin.php';

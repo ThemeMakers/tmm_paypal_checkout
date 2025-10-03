@@ -1,16 +1,16 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: ThemeMakers PayPal Express Checkout\n"
-"POT-Creation-Date: 2019-06-13 20:09+0200\n"
+"POT-Creation-Date: 2025-10-03 17:56+0200\n"
 "PO-Revision-Date: 2016-11-22 14:14+0100\n"
 "Last-Translator: Alex TM <support@webtemplatemasters.com>\n"
 "Language-Team: Alex TM <support@webtemplatemasters.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.3\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"X-Generator: Poedit 3.4.4\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: index.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -28,7 +28,7 @@ msgstr ""
 msgid "Featured Cars Bundle"
 msgstr ""
 
-#: index.php:117
+#: index.php:121
 msgid "Payments history"
 msgstr ""
 
@@ -44,237 +44,237 @@ msgstr ""
 msgid "PayPal environment"
 msgstr ""
 
-#: views/adminconfiguration.php:20
+#: views/adminconfiguration.php:19
 msgid "Sandbox - Testing"
 msgstr ""
 
-#: views/adminconfiguration.php:21
+#: views/adminconfiguration.php:20
 msgid "Live - Production"
 msgstr ""
 
-#: views/adminconfiguration.php:28
+#: views/adminconfiguration.php:27
 msgid "PayPal API credentials"
 msgstr ""
 
-#: views/adminconfiguration.php:32
+#: views/adminconfiguration.php:31
 msgid "API Username"
 msgstr ""
 
-#: views/adminconfiguration.php:32 views/adminconfiguration.php:36
-#: views/adminconfiguration.php:40
+#: views/adminconfiguration.php:31 views/adminconfiguration.php:35
+#: views/adminconfiguration.php:39
 msgid "required"
 msgstr ""
 
-#: views/adminconfiguration.php:36
+#: views/adminconfiguration.php:35
 msgid "API Password"
 msgstr ""
 
-#: views/adminconfiguration.php:40
+#: views/adminconfiguration.php:39
 msgid "API Signature"
 msgstr ""
 
-#: views/adminconfiguration.php:49
+#: views/adminconfiguration.php:48
 msgid "Thank you page"
 msgstr ""
 
-#: views/adminconfiguration.php:49
+#: views/adminconfiguration.php:48
 msgid "successful payment"
 msgstr ""
 
-#: views/adminconfiguration.php:55
+#: views/adminconfiguration.php:54
 msgid "Error page"
 msgstr ""
 
-#: views/adminconfiguration.php:55
+#: views/adminconfiguration.php:54
 msgid "failed payment"
 msgstr ""
 
-#: views/adminconfiguration.php:57
+#: views/adminconfiguration.php:56
 msgid "Please select"
 msgstr ""
 
-#: views/adminconfiguration.php:67
+#: views/adminconfiguration.php:66
 msgid "Type of checkout flow"
 msgstr ""
 
-#: views/adminconfiguration.php:76
+#: views/adminconfiguration.php:75
 msgid "Buyer does not need to create a PayPal account to check out."
 msgstr ""
 
-#: views/adminconfiguration.php:77
+#: views/adminconfiguration.php:76
 msgid "Buyer must have a PayPal account to check out."
 msgstr ""
 
-#: views/adminconfiguration.php:86
+#: views/adminconfiguration.php:85
 msgid "PayPal currency"
 msgstr ""
 
-#: views/adminconfiguration.php:90 views/adminhistory.php:135
-#: views/adminhistory.php:170 views/adminhistorydetails.php:24
+#: views/adminconfiguration.php:89 views/adminhistory.php:131
+#: views/adminhistory.php:166 views/adminhistorydetails.php:24
 msgid "Currency"
 msgstr ""
 
-#: views/adminconfiguration.php:109
+#: views/adminconfiguration.php:108
 msgid "Save"
 msgstr ""
 
-#: views/adminhistory.php:8
+#: views/adminhistory.php:4
 msgid "PayPal Express Checkout - Payments history"
 msgstr ""
 
-#: views/adminhistory.php:12
+#: views/adminhistory.php:8
 msgid "Payment updated."
 msgstr ""
 
-#: views/adminhistory.php:17
+#: views/adminhistory.php:13
 msgid "Here you can see all payments made on your website."
 msgstr ""
 
-#: views/adminhistory.php:61
+#: views/adminhistory.php:57
 msgid "Show all years"
 msgstr ""
 
-#: views/adminhistory.php:69
+#: views/adminhistory.php:65
 msgid "January"
 msgstr ""
 
-#: views/adminhistory.php:70
+#: views/adminhistory.php:66
 msgid "February"
 msgstr ""
 
-#: views/adminhistory.php:71
+#: views/adminhistory.php:67
 msgid "March"
 msgstr ""
 
-#: views/adminhistory.php:72
+#: views/adminhistory.php:68
 msgid "April"
 msgstr ""
 
-#: views/adminhistory.php:73
+#: views/adminhistory.php:69
 msgid "May"
 msgstr ""
 
-#: views/adminhistory.php:74
+#: views/adminhistory.php:70
 msgid "June"
 msgstr ""
 
-#: views/adminhistory.php:75
+#: views/adminhistory.php:71
 msgid "July"
 msgstr ""
 
-#: views/adminhistory.php:76
+#: views/adminhistory.php:72
 msgid "August"
 msgstr ""
 
-#: views/adminhistory.php:77
+#: views/adminhistory.php:73
 msgid "September"
 msgstr ""
 
-#: views/adminhistory.php:78
+#: views/adminhistory.php:74
 msgid "October"
 msgstr ""
 
-#: views/adminhistory.php:79
+#: views/adminhistory.php:75
 msgid "November"
 msgstr ""
 
-#: views/adminhistory.php:80
+#: views/adminhistory.php:76
 msgid "December"
 msgstr ""
 
-#: views/adminhistory.php:85
+#: views/adminhistory.php:81
 msgid "Show all months"
 msgstr ""
 
-#: views/adminhistory.php:91
+#: views/adminhistory.php:87
 msgid "Filter"
 msgstr ""
 
-#: views/adminhistory.php:99
+#: views/adminhistory.php:95
 msgid "enter user email"
 msgstr ""
 
-#: views/adminhistory.php:100
+#: views/adminhistory.php:96
 msgid "Search"
 msgstr ""
 
-#: views/adminhistory.php:104
+#: views/adminhistory.php:100
 msgid "items"
 msgstr ""
 
-#: views/adminhistory.php:106
+#: views/adminhistory.php:102
 msgid "Go to the first page"
 msgstr ""
 
-#: views/adminhistory.php:107
+#: views/adminhistory.php:103
 msgid "Go to the previous page"
 msgstr ""
 
-#: views/adminhistory.php:110
+#: views/adminhistory.php:106
 msgid "Current page"
 msgstr ""
 
-#: views/adminhistory.php:110
+#: views/adminhistory.php:106
 msgid "of"
 msgstr ""
 
-#: views/adminhistory.php:113
+#: views/adminhistory.php:109
 msgid "Go to the next page"
 msgstr ""
 
-#: views/adminhistory.php:114
+#: views/adminhistory.php:110
 msgid "Go to the last page"
 msgstr ""
 
-#: views/adminhistory.php:126 views/adminhistory.php:161
+#: views/adminhistory.php:122 views/adminhistory.php:157
 msgid "ID"
 msgstr ""
 
-#: views/adminhistory.php:129 views/adminhistory.php:164
+#: views/adminhistory.php:125 views/adminhistory.php:160
 #: views/adminhistorydetails.php:12
 msgid "Status"
 msgstr ""
 
-#: views/adminhistory.php:132 views/adminhistory.php:167
+#: views/adminhistory.php:128 views/adminhistory.php:163
 #: views/adminhistorydetails.php:20
 msgid "Amount"
 msgstr ""
 
-#: views/adminhistory.php:138 views/adminhistory.php:173
+#: views/adminhistory.php:134 views/adminhistory.php:169
 #: views/adminhistorydetails.php:28
 msgid "Package ID"
 msgstr ""
 
-#: views/adminhistory.php:141 views/adminhistory.php:176
+#: views/adminhistory.php:137 views/adminhistory.php:172
 #: views/adminhistorydetails.php:32
 msgid "Description"
 msgstr ""
 
-#: views/adminhistory.php:144 views/adminhistory.php:179
+#: views/adminhistory.php:140 views/adminhistory.php:175
 #: views/adminhistorydetails.php:36
 msgid "Firstname"
 msgstr ""
 
-#: views/adminhistory.php:147 views/adminhistory.php:182
+#: views/adminhistory.php:143 views/adminhistory.php:178
 #: views/adminhistorydetails.php:40
 msgid "Lastname"
 msgstr ""
 
-#: views/adminhistory.php:150 views/adminhistory.php:185
+#: views/adminhistory.php:146 views/adminhistory.php:181
 #: views/adminhistorydetails.php:44
 msgid "E-mail"
 msgstr ""
 
-#: views/adminhistory.php:153 views/adminhistory.php:188
+#: views/adminhistory.php:149 views/adminhistory.php:184
 #: views/adminhistorydetails.php:16
 msgid "Date"
 msgstr ""
 
-#: views/adminhistory.php:224
+#: views/adminhistory.php:220
 msgid "Edit"
 msgstr ""
 
-#: views/adminhistory.php:225
+#: views/adminhistory.php:221
 msgid "View details"
 msgstr ""
 
@@ -311,7 +311,7 @@ msgstr ""
 msgid "Failed"
 msgstr ""
 
-#: views/frontendshortcode.php:56
+#: views/frontendshortcode.php:71
 msgid "Pay with PayPal"
 msgstr ""
 
@@ -320,7 +320,7 @@ msgid "ThemeMakers PayPal Express Checkout"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
-msgid "http://webtemplatemasters.com"
+msgid "https://webtemplatemasters.com"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -332,5 +332,5 @@ msgid "ThemeMakers"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "http://themeforest.net/user/ThemeMakers"
+msgid "https://themeforest.net/user/ThemeMakers"
 msgstr ""
